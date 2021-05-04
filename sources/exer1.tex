@@ -1,0 +1,168 @@
+\documentclass[a4paper,oneside,10pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+
+\usepackage{caption,multicol}
+\setlength{\columnsep}{0.2cm}
+\usepackage{pdfpages}
+
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+
+%Pagination stuff.
+\setlength{\topmargin}{-.3 in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+
+\begin{center}
+{\large  ТАУ \hspace{0.1cm} Лабораторная работа \textnumero 1}
+
+\vspace{5pt}
+\textit{\large Передаточные функции}\\ %You should put your name here
+\vspace{10pt}
+Due: 28 марта 2020 %You should write the date here.
+\end{center}
+
+\vspace{0.2 cm}
+
+
+
+Пусть система управления с одним входом~$ x(t) $ и одним выходом~$ y(t) $ задана  передаточной функцией~$ W(s) $:
+
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item
+		
+		$ 	W(s) = 
+		\dfrac{2(s+1)}
+		{(s+2)^2(s+3)} $;
+		\item 
+		
+		$ 	W(s) = 
+		\dfrac{4(s+2)}
+		{(s+3)^2(s+1)} $;
+		
+		\item 
+		
+		$ 		W(s) = 
+		\dfrac{6(s+2)}
+		{(s+4)^2(s+4)} $;
+		
+		\item
+		
+		$ 	W(s) = 
+		\dfrac{8(s+5)}
+		{(s+3)^2(s+4)} $;
+		
+		\item 
+		
+		$ 	W(s) = 
+		\dfrac{10(s+4)}
+		{(s+3)^2(s+5)} $;
+		
+		\item
+		
+		$ 	W(s) = 
+		\dfrac{3(s+2)}
+		{(s+1)^2(s+3)} $;
+		
+		\item
+		
+		$ W(s) = 
+		\dfrac{5(s+4)}
+		{(s+1)^2(s+1)} $;
+		\item
+		
+		$ W(s) = 
+		\dfrac{4(s+2)}
+		{(s+3)^2(s+1)} $;
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{7(s+2)}
+		{(s+2)^2(s+4)} $;
+		
+		\item 
+		
+		$ 	W(s) = 
+		\dfrac{9(s+3)}
+		{(s+5)^2(s+4)} $;
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{8(s+2)}
+		{(s+1)^2(s+5)} $;
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{8(s+2)}
+		{(s+8)^2(s+5)} $;
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{3(s+1)}
+		{(s+7)^2(s+2)} $;
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{2(s+2)}
+		{(s+8)^2(s+4)} $.
+		
+	\end{enumerate}
+\end{multicols}
+
+
+\subsection*{\textit{Задания}}
+
+\begin{enumerate}
+\item
+Выписать дифференциальное уравнение по передаточной функции~$ W(s) $.
+\item \label{ordinary_eq}
+Найти решение дифференциального уравнения, полагая~$ x(t) = 0 $, при некоторых начальных условиях. 
+\item \label{unordinary_eq}
+Определить переходную функцию системы ($ x(t) =1 $, с нулевыми начальными условиями), используя для этого методы теории дифференциальных уравнений, операторные методы. 
+\item
+Для исходных уравнений из пунктов~\ref{ordinary_eq}, \ref{unordinary_eq} найти численное решение методом Эйлера. Сравнить полученные результаты с аналитическим решением, построив графики и определив максимальную относительную погрешность.  Подобрать такой шаг в методе Эйлера, чтобы максимальная относительная погрешность не превышала 0,01\%. 
+
+
+\end{enumerate}
+
+
+
+\end{document}
+
+

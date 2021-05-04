@@ -1,0 +1,191 @@
+\documentclass[a4paper,oneside,10pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+
+\usepackage{caption,multicol}
+\setlength{\columnsep}{0.2cm}
+\usepackage{pdfpages}
+
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+
+%Pagination stuff.
+\setlength{\topmargin}{-.3 in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+
+\begin{center}
+{\large  ТАУ \hspace{0.1cm} Лабораторная работа \textnumero 2}
+
+\vspace{5pt}
+\textit{\large Временные и частотные характеристики}\\ %You should put your name here
+\vspace{10pt}
+Due: 4 апреля 2020 %You should write the date here.
+\end{center}
+
+\vspace{0.2 cm}
+
+
+
+Пусть система управления с одним входом~$ x(t) $ и одним выходом~$ y(t) $ задана  передаточной функцией~$ W(s) $: 
+
+\begin{multicols}{2}
+
+	
+	\begin{enumerate}
+		\item
+		
+		$ 	W(s) = 
+		\dfrac{s+1}
+		{(s+2)(0.04s^2 + 0.2s+1)} $;
+		\item 
+		
+		$ 	W(s) = 
+		\dfrac{2(s+2)}
+		{(s+1)(0.09s^2+0.3s+1)} $;
+		
+		\item 
+		
+		$ 		W(s) = 
+		\dfrac{3(s+1)}
+		{(s+3)(0.16s^2+0.4+1)} $;
+		
+		\item
+		
+		$ 	W(s) = 
+		\dfrac{4(s+3)}
+		{(s+1)(0.25s^2+0.5s+1)} $;
+		
+		\item 
+		
+		$ 	W(s) = 
+		\dfrac{5(s+3)}
+		{(s+1)(0.36s^2+0.6s+1)} $;
+		
+		\item
+		
+		$ 	W(s) = 
+		\dfrac{6(s+4)}
+		{(s+1)(0.49s^2+0.7s+1)} $;
+		
+		\item
+		
+		$ W(s) = 
+		\dfrac{7(s+4)}
+		{(s+2)(0.64s^2+0.8s+1)} $;
+		
+		\item
+		
+		$ W(s) = 
+		\dfrac{8(s+5)}
+		{(s+3)(0.25s^2+0.7s+1)} $;
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{9(s+5)}
+		{(s+2)(0.16s^2+0.56s+1)} $;
+		
+	
+		
+		
+		
+		\item
+		
+		$ 	W(s) = 
+		\dfrac{2(s+1)}
+		{(s+3)(0.49s^2+0.7s+1)} $;
+		
+		\item
+		
+		$ W(s) = 
+		\dfrac{5(s+7)}
+		{(s+1)(0.64s^2+0.8s+1)} $;
+		
+		\item
+		
+		$ W(s) = 
+		\dfrac{8(s+4)}
+		{(s+2)(0.25s^2+0.7s+1)} $;
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{9(s+1)}
+		{(s+1)(0.16s^2+0.56s+1)} $;
+		
+		
+		
+		
+		\item 
+		
+		$ W(s) = 
+		\dfrac{10(s+5)}
+		{(s+4)(0.36s^2+0.84s+1)} $.
+		
+		
+	\end{enumerate}
+\end{multicols}
+
+
+\subsection*{\textit{Задания}}
+
+\begin{enumerate}
+\item
+Найти переходную и импульсную функции. 
+\item \label{ordinary_eq}
+Найти АЧХ и ФЧХ системы. 
+Определить реакцию системы в установившемся режиме при входном сигнале~$ x(t) = 2\sin(0.5t) $.
+
+\item 
+Используя пакет control найти: 
+\begin{itemize}
+	\item
+	переходную функцию (\textit{step}), 
+	\item
+	импульсную функцию (\textit{impulse}),
+	\item
+	реакцию на входной сигнал~$ x(t) = 2\sin(0.5t) $ (\textit{forced-response}),
+	\item 
+	характеристики выходного сигнала в установившемся режиме (\textit{freqresp}),
+	\item
+	построить диаграмму Найквиста. 
+\end{itemize}
+
+Сравнить полученные результаты. 
+\end{enumerate}
+
+
+
+\end{document}
+
+

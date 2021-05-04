@@ -1,0 +1,102 @@
+\documentclass[a4paper,oneside,10pt]{book}
+
+%These tell TeX which packages to use.
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+
+\usepackage{caption,multicol}
+\setlength{\columnsep}{0.2cm}
+\usepackage{pdfpages}
+
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+
+%Pagination stuff.
+\setlength{\topmargin}{-.3 in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+
+
+
+\begin{document}
+	
+	
+	\begin{center}
+		{\large  ТАУ \hspace{0.1cm} Лабораторная работа \textnumero 4}
+		
+		\vspace{5pt}
+		\textit{\large Устойчивость и качество систем упроавления}\\ %You should put your name here
+		\vspace{10pt}
+		Due: 16 мая 2020 %You should write the date here.
+	\end{center}
+	
+	\vspace{0.2 cm}
+	
+	
+	
+	Пусть система управления с одним входом~$ x(t) $ и одним выходом~$ y(t) $ задана  передаточной функцией~$ W(s) $: 
+	
+	\begin{equation*}
+			W(s) = 
+		\dfrac{a_1 s+1}
+		{b_3 s^3 + b_2 s^2 + b_1 s +1} , 
+	\end{equation*}
+	
+	где коэффициенты  определяются согласно варианту $ n $: 
+	\begin{equation*}
+		a_1 = n, \quad b_1 = n, \quad b_2 = (n\bmod 3) + 1, \quad b_3 = (n \bmod 8) + 1.  
+	\end{equation*}
+	
+	\subsection*{\textit{Задания}}
+	
+	\begin{enumerate}
+		\item
+		Определить усточивость системы, используя основной критерий устойчивости, критерий Гурвица. Найти степень устойчивости. 
+		\item
+		Определить область устойчивости для системы, зафиксировав только значение $ b_1 $.  
+		
+		\
+		
+		
+		\item 
+		Для   $(a_1, b_3, b_2)  \in \mathcal{D}$ из области устойчивости, полученной в задании 2, определить следующие характеристики качества систем управления (используя пакет control) (варьируем каждую компоненту вектора минумум 4 раза, строим графики для каждого параметра в одной системе координат): 
+		\begin{itemize}
+			\item
+			время переходного процесса $ t_{\text{п}} $,
+			\item
+			максимальное отклонение в переходный период (перерегулирование $ \sigma $),
+			\item
+			колебательность переходного процесса.
+			
+		\end{itemize}
+		
+		Сравнить полученные харатеристики, сделать выводы. 
+	\end{enumerate}
+	
+	
+	
+\end{document}
+
+
